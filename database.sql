@@ -6,6 +6,7 @@ CREATE TABLE artifacts (
   era VARCHAR(100),
   image_url VARCHAR(255), -- Placeholder for file storage
   created_at TIMESTAMP DEFAULT NOW()
+  
 );
 
 -- Metadata table (provenance, restoration, etc.)
