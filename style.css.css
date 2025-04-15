@@ -1,0 +1,112 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --background: #fdfdfc;
+  --text: #1a1a1a;
+  --accent: #c0a16b;
+  --glow: rgba(192, 161, 107, 0.2);
+  --node: #c9d6ff;
+  --link: #a29bfe;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header.hero {
+  background: linear-gradient(to right, #eae8e0, #fdfcf8);
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: inset 0 0 80px var(--glow);
+}
+
+header.hero h1 {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+header.hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section.intro p,
+section.features p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+.feature {
+  background: #ffffffaa;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 12px;
+  flex: 1 1 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.mockup img {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px var(--glow);
+}
+
+.cta {
+  text-align: center;
+  background: radial-gradient(circle, #fdfcf8 30%, #eae8e0 100%);
+  border-top: 2px solid #eee;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 15px var(--glow);
+  transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #b39059;
+}
+
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ccc;
+}
