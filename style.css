@@ -3,12 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 :root {
-  --background: #fdfdfc;
-  --text: #1a1a1a;
+  --background: #0b0c10;
+  --text: #f5e9d3;
   --accent: #c0a16b;
   --glow: rgba(192, 161, 107, 0.2);
-  --node: #c9d6ff;
-  --link: #a29bfe;
+  --node: #b2fefa;
+  --link: #c38d9e;
+  --box: rgba(255, 255, 255, 0.03);
+  --border: #c0a16b55;
 }
 
 body {
@@ -21,10 +23,11 @@ body {
 }
 
 header.hero {
-  background: linear-gradient(to right, #eae8e0, #fdfcf8);
+  background: linear-gradient(to right, #1e1f26, #0b0c10);
   padding: 4rem 2rem;
   text-align: center;
-  box-shadow: inset 0 0 80px var(--glow);
+  box-shadow: inset 0 0 120px var(--glow);
+  border-bottom: 1px solid var(--border);
 }
 
 header.hero h1 {
@@ -35,7 +38,8 @@ header.hero h1 {
 
 header.hero p {
   font-size: 1.2rem;
-  color: #555;
+  color: var(--text);
+  opacity: 0.85;
 }
 
 section {
@@ -44,10 +48,18 @@ section {
   margin: 0 auto;
 }
 
+section h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
 section.intro p,
-section.features p {
+section.features p,
+section.mockup p,
+section.cta p {
   font-size: 1rem;
-  color: #333;
+  color: var(--text);
+  opacity: 0.9;
 }
 
 .features {
@@ -58,12 +70,12 @@ section.features p {
 }
 
 .feature {
-  background: #ffffffaa;
-  border: 1px solid #ddd;
+  background: var(--box);
+  border: 1px solid var(--border);
   padding: 1.5rem;
   border-radius: 12px;
   flex: 1 1 250px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 0 18px var(--glow);
   transition: transform 0.3s ease;
 }
 
@@ -76,20 +88,21 @@ section.features p {
   max-width: 800px;
   margin-top: 1rem;
   border-radius: 16px;
-  box-shadow: 0 0 20px var(--glow);
+  box-shadow: 0 0 25px var(--glow);
+  border: 1px solid var(--border);
 }
 
 .cta {
   text-align: center;
-  background: radial-gradient(circle, #fdfcf8 30%, #eae8e0 100%);
-  border-top: 2px solid #eee;
+  background: radial-gradient(circle, #1e1f26 30%, #0b0c10 100%);
+  border-top: 1px solid var(--border);
 }
 
 .contact-button {
   display: inline-block;
   margin-top: 1rem;
   background: var(--accent);
-  color: white;
+  color: #0b0c10;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
@@ -103,10 +116,10 @@ section.features p {
 }
 
 footer {
-  background: #eee;
+  background: #111;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  color: #555;
-  border-top: 1px solid #ccc;
+  color: var(--text);
+  border-top: 1px solid var(--border);
 }
