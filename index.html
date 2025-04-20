@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Living Archives | A Museum Catalog of the Future</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header class="hero">
@@ -33,31 +34,40 @@
       </div>
     </section>
 
- <section class="mockup">
-  <h2>Prototype Visuals</h2>
-  <p>Below are concept images showing how the interface might look and feel.</p>
+    <section class="mockup">
+      <h2>Prototype Visuals</h2>
+      <p>Below are concept images showing how the interface might look and feel.</p>
 
-  <!-- Add visibility borders + fallback styling -->
-  <div class="mockup-image">
-    <img src="images/sekhmet-ui.jpg" alt="sekhmet-UI">
-    <p>Mockup 1: UI Layout</p>
-  </div>
+      <div class="mockup-image">
+        <img src="images/sekhmet-ui.jpg" alt="Sekhmet UI Interface">
+        <p>Multi-layered object record: metadata, scans, and UI layout.</p>
+      </div>
 
-  <div class="mockup-image">
-    <img src="images/sekhmet-lidar.jpg" alt="Sekhmet LIDAR">
-    <p>Mockup 2: LIDAR Scan Display</p>
-  </div>
-</section>
+      <div class="mockup-image">
+        <img src="images/sekhmet-lidar.jpg" alt="Sekhmet LIDAR Scan">
+        <p>LIDAR scan concept highlighting restoration and craftsmanship.</p>
+      </div>
+    </section>
 
     <section class="cta">
       <h2>Let’s Build the Future of Archives</h2>
       <p>If your museum or institution is interested in piloting Living Archives or seeing a custom demo, reach out.</p>
-      <a href="mailto:sparrowdetour@gmail.com" class="contact-button">Start a Conversation</a>
+      <a href="mailto:your.email@example.com" class="contact-button">Start a Conversation</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Living Archives by Rachel Gura. All rights reserved.</p>
+    <p>&copy; 2025 Living Archives by [Your Name]. All rights reserved.</p>
   </footer>
+
+  <!-- Modal for metadata expansion -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <img id="modal-image" src="" alt="">
+    </div>
+  </div>
 </body>
 </html>
