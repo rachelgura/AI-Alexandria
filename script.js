@@ -3,6 +3,7 @@ console.log("Living Archives is ready.");
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal');
+
   const closeBtn = document.getElementById('modal-close');
   const titleEl = document.getElementById('modal-title');
   const descEl = document.getElementById('modal-description');
@@ -34,3 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+  // Hover for features and mockups
+  document.querySelectorAll('[data-node]').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      const id = el.dataset.node;
+      document.querySelectorAll(`.node[data-node="${id}"], .link[data-from="${id}"], .link[data-to="${id}"]`)
+        .forEach(item => item.classList.add('highlighted'));
+    });
+    el.addEventListener('mouseleave', () => {
+      const id = el.dataset.node;
+      document.querySelectorAll(`.node[data-node="${id}"], .link[data-from="${id}"], .link[data-to="${id}"]`)
+        .forEach(item => item.classList.remove('highlighted'));
+    });
+  });
+});
+
