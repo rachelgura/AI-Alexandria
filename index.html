@@ -8,6 +8,24 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+
+    <!-- SVG background for Data Web nodes and links -->
+  <div class="svg-background">
+    <svg id="data-web-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <!-- Feature nodes -->
+      <circle class="node" data-node="multi-layer" cx="20%" cy="30%" r="1.5"></circle>
+      <circle class="node" data-node="knowledge-web" cx="50%" cy="20%" r="1.5"></circle>
+      <circle class="node" data-node="collaboration" cx="80%" cy="60%" r="1.5"></circle>
+      <!-- Image nodes -->
+      <circle class="node" data-node="sekhmet-ui" cx="30%" cy="80%" r="1.5"></circle>
+      <circle class="node" data-node="sekhmet-lidar" cx="70%" cy="80%" r="1.5"></circle>
+      <!-- Example links -->
+      <line class="link" data-from="multi-layer" data-to="knowledge-web" x1="20%" y1="30%" x2="50%" y2="20%"></line>
+      <line class="link" data-from="knowledge-web" data-to="collaboration" x1="50%" y1="20%" x2="80%" y2="60%"></line>
+      <line class="link" data-from="multi-layer" data-to="sekhmet-ui" x1="20%" y1="30%" x2="30%" y2="80%"></line>
+      <line class="link" data-from="multi-layer" data-to="sekhmet-lidar" x1="20%" y1="30%" x2="70%" y2="80%"></line>
+    </svg>
+  </div>
   <header class="hero">
     <h1>Living Archives</h1>
     <p>Where history lives, breathes, and connects.</p>
