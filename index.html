@@ -8,24 +8,21 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-
-    <!-- SVG background for Data Web nodes and links -->
+  <!-- SVG background for Data Web nodes and links -->
   <div class="svg-background">
     <svg id="data-web-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <!-- Feature nodes -->
       <circle class="node" data-node="multi-layer" cx="20%" cy="30%" r="1.5"></circle>
       <circle class="node" data-node="knowledge-web" cx="50%" cy="20%" r="1.5"></circle>
       <circle class="node" data-node="collaboration" cx="80%" cy="60%" r="1.5"></circle>
-      <!-- Image nodes -->
       <circle class="node" data-node="sekhmet-ui" cx="30%" cy="80%" r="1.5"></circle>
       <circle class="node" data-node="sekhmet-lidar" cx="70%" cy="80%" r="1.5"></circle>
-      <!-- Example links -->
       <line class="link" data-from="multi-layer" data-to="knowledge-web" x1="20%" y1="30%" x2="50%" y2="20%"></line>
       <line class="link" data-from="knowledge-web" data-to="collaboration" x1="50%" y1="20%" x2="80%" y2="60%"></line>
       <line class="link" data-from="multi-layer" data-to="sekhmet-ui" x1="20%" y1="30%" x2="30%" y2="80%"></line>
       <line class="link" data-from="multi-layer" data-to="sekhmet-lidar" x1="20%" y1="30%" x2="70%" y2="80%"></line>
     </svg>
   </div>
+
   <header class="hero">
     <h1>Living Archives</h1>
     <p>Where history lives, breathes, and connects.</p>
@@ -38,39 +35,60 @@
     </section>
 
     <section class="features">
-      <div class="feature">
+      <div class="feature" data-node="multi-layer">
         <h3>Multi-Layered Object Records</h3>
-        <p>Store rich metadata, high-res imagery, 3D scans, condition reports, and linked documentation all in one elegant interface.</p>
+        <p>Store rich metadata, high-res imagery, 3D scans, condition reports, and linked documentation in an elegant interface.</p>
       </div>
-      <div class="feature">
+      <div class="feature" data-node="knowledge-web">
         <h3>Visual Knowledge Web</h3>
-        <p>Objects are visualized as part of a digital constellation, showing historical, thematic, and scholarly relationships.</p>
+        <p>Artifacts are part of a digital constellation, showing historical, thematic, and scholarly relationships.</p>
       </div>
-      <div class="feature">
+      <div class="feature" data-node="collaboration">
         <h3>Inter-Museum Collaboration</h3>
-        <p>Connect research and collection data across institutions, enabling shared exhibitions, conservation planning, and storytelling.</p>
+        <p>Connect research and collection data across institutions for shared exhibitions and planning.</p>
       </div>
     </section>
 
     <section class="mockup">
       <h2>Prototype Visuals</h2>
-      <p>Below are concept images showing how the interface might look and feel.</p>
-
-      <div class="mockup-image">
+      <p>Click an image to explore detailed metadata in our modal lightbox.</p>
+      <div class="mockup-image" data-node="sekhmet-ui">
         <img src="images/sekhmet-ui.jpg" alt="Sekhmet UI Interface">
         <p>Multi-layered object record: metadata, scans, and UI layout.</p>
       </div>
-
-      <div class="mockup-image">
+      <div class="mockup-image" data-node="sekhmet-lidar">
         <img src="images/sekhmet-lidar.jpg" alt="Sekhmet LIDAR Scan">
-        <p>LIDAR scan concept highlighting restoration and craftsmanship.</p>
+        <p>LIDAR scan concept highlighting restoration craftsmanship.</p>
+      </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+      <h2>Featured Artifacts</h2>
+      <div class="carousel">
+        <div class="carousel-slide" data-index="0">
+          <img src="https://via.placeholder.com/400x300?text=Artifact+1" alt="Artifact 1">
+          <p>Artifact 1: Title/Description</p>
+        </div>
+        <div class="carousel-slide" data-index="1">
+          <img src="https://via.placeholder.com/400x300?text=Artifact+2" alt="Artifact 2">
+          <p>Artifact 2: Title/Description</p>
+        </div>
+        <div class="carousel-slide" data-index="2">
+          <img src="https://via.placeholder.com/400x300?text=Artifact+3" alt="Artifact 3">
+          <p>Artifact 3: Title/Description</p>
+        </div>
+        <div class="carousel-slide" data-index="3">
+          <img src="https://via.placeholder.com/400x300?text=Artifact+4" alt="Artifact 4">
+          <p>Artifact 4: Title/Description</p>
+        </div>
       </div>
     </section>
 
     <section class="cta">
       <h2>Let’s Build the Future of Archives</h2>
       <p>If your museum or institution is interested in piloting Living Archives or seeing a custom demo, reach out.</p>
-      <a href="mailto:your.sparrowdetour@gmail.com" class="contact-button">Start a Conversation</a>
+      <a href="mailto:your.email@example.com" class="contact-button">Start a Conversation</a>
     </section>
   </main>
 
@@ -89,3 +107,4 @@
   </div>
 </body>
 </html>
+

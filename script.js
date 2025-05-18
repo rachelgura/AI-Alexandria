@@ -53,3 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Auto-cycling Carousel
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.carousel-slide');
+  let current = 0;
+  const total = slides.length;
+  const interval = 4000; // 4 seconds per slide
+
+  function updateCarousel() {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[current].classList.add('active');
+  }
+
+  updateCarousel();
+  setInterval(() => {
+    current = (current + 1) % total;
+    updateCarousel();
+  }, interval);
+});

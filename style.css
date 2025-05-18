@@ -214,3 +214,43 @@ footer {
   opacity: 1 !important;
 }
 
+/* Carousel styles */
+.carousel-section {
+  padding: 3rem 2rem;
+  background: #111;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.carousel-slide {
+  min-width: 400px;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  transform: scale(0.8);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.carousel-slide.active {
+  transform: scale(1);
+  opacity: 1;
+  box-shadow: 0 0 30px var(--glow);
+  z-index: 2;
+}
+
+.carousel-slide:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px var(--glow);
+}
+
+.carousel-slide img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
